@@ -3,7 +3,7 @@ import os
 
 from themes import setup_theme, render_theme_toggle, handle_theme_refresh
 
-st.set_page_config(layout='wide', page_title="A Turning Point")
+st.set_page_config(layout='wide', page_title="OverSaturation")
 setup_theme()
 render_theme_toggle() 
 handle_theme_refresh()
