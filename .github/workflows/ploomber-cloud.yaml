@@ -1,0 +1,30 @@
+name: Deploy to Ploomber Cloud
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install Ploomber Cloud
+        run: pip install ploomber-cloud
+      
+      - name: Deploy to Ploomber Cloud
+        env:
+          PLOOMBER_CLOUD_KEY: ${{ secrets.PLOOMBER_CLOUD_KEY }}
+        run: |
+          ploomber-cloud key $PLOOMBER_CLOUD_KEY
+          ploomber-cloud deploy --watch
+
