@@ -8,7 +8,7 @@ def initialize_theme_state():
             "light": {
                 "theme.base": "light",
                 "theme.backgroundColor": "white",
-                "theme.primaryColor": "#5591f5",
+                "theme.primaryColor": "#6e90cc",
                 "theme.secondaryBackgroundColor": "#82E1B9",
                 "theme.textColor": "#0a1464",
                 "button_face": "🌙",
