@@ -3,7 +3,7 @@ name: Deploy to Ploomber Cloud
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
